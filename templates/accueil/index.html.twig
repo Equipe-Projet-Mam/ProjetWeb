@@ -1,0 +1,238 @@
+
+{% extends 'layout.html.twig' %}
+
+
+
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("accueil.css") }}">
+{% endblock %}
+{% block contenue %}
+
+    <div>
+        <div class="ParallaxVideo">
+            <video  src="{{ asset("/images/main/entreprise.mp4") }}"  style="max-width:100%"autoplay loop muted></video>
+        </div>
+        <!------------vitre -->
+        <div class="vitre">
+            <div class="card_vitre" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">
+                <div class="year">
+                    <span class="words">Menuiserie</span>
+                    <span class="words">d'aluminium</span>
+                    <span class="words">moderne</span>
+                </div>
+                <br><br><br>
+                <div class="welcome">
+                    Créateurs du bonheur
+                </div>
+            </div>
+        </div>
+        <!-- Fin vitre-->
+    </div>
+
+
+
+
+    <div class="cont">
+        <div class ="pres" style="text-align :center; color: black">
+            <h1>Présentation</h1>
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsa aut neque, error rerum, reiciendis dolores dolor eos mollitia quaerat velit. Doloremque repellat id animi explicabo aspernatur fuga error voluptatem?
+            Provident, distinctio a fuga ex accusamus pariatur laboriosam illo? Consequatur, ex soluta praesentium quidem eligendi quaerat exercitationem tempore amet sequi voluptatem perferendis, enim dignissimos aliquam accusamus, temporibus quasi consectetur assumenda.
+            Soluta amet at sit, adipisci voluptatem commodi rerum molestiae voluptate expedita voluptatibus blanditiis nesciunt in atque molestias, dignissimos nisi quis quaerat qui fuga? Reprehenderit vero rerum odio sint delectus laborum.
+        </div>
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <div>
+        <h1>Nos Valeurs</h1>
+
+        <div class="values">
+            <div class="ValueCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                        <h3 class="lorem">Responsabilité</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ValueCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                        <h3> Ethique</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ValueCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                        <h3>Excellence</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div>
+            <main>
+                <h1>Nos Projets</h1>
+                <br><br>
+                <ul id="cards">
+                    <li class="card" id="card_1">
+                        <div class="card__content">
+                            <div>
+                                <h2>Card One</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                            </div>
+                            <figure>
+                                <img src="{{ asset("images/main/building5.jpg") }}" style="height: auto" alt="Image description"/>
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="card" id="card_2">
+                        <div class="card__content">
+                            <div>
+                                <h2>Card Two</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                            </div>
+                            <figure>
+                                <img src="{{ asset("images/main/building2.jpg") }}" style="height: auto" alt="Image description">
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="card" id="card_3">
+                        <div class="card__content">
+                            <div>
+                                <h2>Card Three</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                            </div>
+                            <figure>
+                                <img src="{{ asset("images/main/building3.jpg") }}" style="height: auto" alt="project3">
+                            </figure>
+                        </div>
+                    </li>
+
+                </ul>
+            </main>
+        </div>
+
+
+
+
+
+
+
+
+
+        <h1>Nos Responsables</h1>
+        <br><br>
+        <div class="employes">
+            <div class=" cardEmployes">
+                <img src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no" alt="Person" class="card__image">
+                <p class="card__name_employes">Lily-Grace Colley</p>
+                <div class="grid-container">
+
+                    <div class="grid-child-posts">
+                        156 Post
+                    </div>
+
+                    <div class="grid-child-followers">
+                        1012 Likes
+                    </div>
+
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#" src="{{ asset("images/logos/icon_facebook.svg") }}"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" src="{{ asset("images/logos/icon_linkedin.svg") }}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" src="{{ asset("images/logos/icon_twitter.svg") }}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                </ul>
+                <button class="btn btn_employes draw-border">Follow</button>
+                <button class="btn btn_employes draw-border">Message</button>
+
+            </div>
+            <div class="cardEmployes">
+                <img src="https://lh3.googleusercontent.com/oUUiPB9sq3ACq4bUaRmo8pgvC4FUpRRrQKcGIBSOsafawZfRpF1vruFeYt6uCfL6wGDQyvOi6Ez9Bpf1Fb7APKjIyVsft7FLGR6QqdRFTiceNQBm1In9aZyrXp33cZi9pUNqjHASdA=s170-no" alt="Person" class="card__image">
+                <p class="card__name_employes">Murray Reeve</p>
+                <div class="grid-container">
+
+                    <div class="grid-child-posts">
+                        305 Post
+                    </div>
+
+                    <div class="grid-child-followers">
+                        2643 Likes
+                    </div>
+
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                </ul>
+                <button class="btn btn_employes draw-border">Follow</button>
+                <button class="btn btn_employes draw-border">Message</button>
+            </div>
+            <div class="cardEmployes">
+                <img src="https://lh3.googleusercontent.com/pZwZJ5HIL5iKbA91UGMUIPR0VJWa3K0vOGzDZmY6wU3EJBUdfsby3VEyxU162XxTyOyP3D154tjkr-4Jgcx8lygYUR8eB-jVmld4dsHi1c-mE_A8jKccseAG7bdEwVrcuuk6ciNtSw=s170-no" alt="Person" class="card__image">
+                <p class="card__name_employes">Bianca Serrano</p>
+                <div class="grid-container">
+
+                    <div class="grid-child-posts">
+                        902 Post
+                    </div>
+
+                    <div class="grid-child-followers">
+                        1300 Likes
+                    </div>
+
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                </ul>
+                <button class="btn btn_employes draw-border">Follow</button>
+                <button class="btn btn_employes draw-border">Message</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

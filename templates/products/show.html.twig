@@ -1,0 +1,50 @@
+
+{% extends 'layout.html.twig' %}
+
+
+
+
+
+{% block contenue %}
+    <div style="top = 20ex">
+        <h1></h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ product.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ product.prix }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src ="data:image/png;base64,{{ image }}" alt = "product image" style="width: 20ex; height: 20ex"></td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ product.categorie }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('products_index') }}">back to list</a>
+
+        <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
+
+        {{ include('products/_delete_form.html.twig') }}
+
+    </div>
+
+
+{% endblock %}

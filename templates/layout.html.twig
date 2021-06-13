@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="{{ asset("images/logo.png") }}"/>
+
+
+
+    {% block stylesheet %}
+
+        <link rel="stylesheet" href="{{ asset("bootstrap.css") }}">
+        <link rel="stylesheet" href="{{ asset("layout.css") }}">
+        <script src="{{ asset("/vs/action.js") }}"></script>
+        <title>Document</title>
+    {% endblock %}
+    <title>
+        {% block title %}
+            Document
+        {% endblock %}
+    </title>
+</head>
+<body>
+<div class="container">
+
+        <!--Section navbar-->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="mamLogo" src="{{ asset("images/logos/mamLogo.svg") }}" style="width: 10ex "alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Accueil
+                                <span class="visually-hidden"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inscription</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Connection</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="text" placeholder="Rechercher Produit">
+                        <button class="btn btn-secondary my-2 my-sm-0" style="margin-left :2ex ;" type="submit">Recherche</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!--Fin Section navbar-->
+
+
+
+
+
+
+
+    <!--Section Contenue-->
+    {% block contenue %}
+    {% endblock %}
+
+    <!--Fin Section Contenue-->
+
+
+
+
+
+
+    <!--Section Contenue-->
+
+
+    <!--Fin Section Contenue-->
+</div>
+<!--Section Footer-->
+<footer class="footer pb-0 mb-0 justify-content-center text-light ">
+    <div class="row my-5 justify-content-center stretch py-5">
+        <div class="col-11">
+            <div class="row ">
+                <div class="col-xl-3 col-md-3 col-sm-3 col-12 my-auto mx-auto a">
+                    <h3 class="footer_title text-muted mb-md-0 mb-5 bold-text">Menuiserie d'Aluminium Moderne</h3>
+                    <br>
+                    <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-3  .ms-auto col-12">
+                    <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                    <ul class="list-unstyled">
+                        <li>Accueil</li>
+                        <li>Projets</li>
+                        <li>Produits</li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 right .col-md-3 .ms-auto col-sm-3 col-12">
+                    <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                    <p class="mb-1">
+                        Lot 75, Zone Industrielle Chotrana 2, 2036, LA SOUKRA, Ariana , Tunisie
+                    <p class="mb-1">
+                        Horaires été :
+                        Lundi - Jeudi
+                        7h-14h
+                        Vendredi - Samedi
+                        7h-13h
+                        ﻿​
+
+                        Mail:
+
+
+                        mam@topnet.tn
+
+
+                        Téléphone : +216 70 721 177
+
+
+                        Fax : +216 70 721 173</p>
+                </div>
+            </div>
+            <br>
+            <div class="row ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.5298628957444!2d10.188044250944605!3d36.90159377982919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb9fd797728d%3A0x7f9d25996b59abf9!2sMenuiserie%20Aluminium%20Moderne!5e0!3m2!1sfr!2stn!4v1623535721461!5m2!1sfr!2stn"  allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <small class="rights" > Pepper All Rights Reserved.Developed by : Trimech Raoua , Laribi Fatma , Bchir Amani et Chaouech Fatma</small>
+
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

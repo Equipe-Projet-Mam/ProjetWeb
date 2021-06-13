@@ -1,0 +1,49 @@
+
+{% extends 'layout.html.twig' %}
+
+
+
+
+
+{% block contenue %}
+<div style="top : 20ex">
+    <h1>Products index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Image</th>
+            <th>Categorie</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key,product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.nom }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.prix }}</td>
+                <td><img src ="data:image/png;base64,{{ images[key] }}" alt = "product image" style="width: 20ex; height: 20ex"></td>
+                <td>{{ product.categorie }}</td>
+                <td>
+                    <a href="{{ path('products_show', {'id': product.id}) }}">show</a>
+                    <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('products_new') }}">Create new</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends 'layout.html.twig' %}
+
+
+
+
+
+{% block contenue %}
+<div style="margin-top :20ex">
+    <h1>Create new Products</h1>
+
+    {{ include('products/_form.html.twig') }}
+
+    <a href="{{ path('products_index') }}">back to list</a>
+</div>
+
+{% endblock %}
