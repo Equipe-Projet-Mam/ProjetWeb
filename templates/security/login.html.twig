@@ -1,0 +1,103 @@
+<?php
+session_start();
+$bdd = new PDO("mysql:host=localhost;dbname=mamprojet", "root", "");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Connection.css">
+    <link rel="connection.css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Connection</title>
+</head>
+<body>
+<div class="proto-container">
+    <div class="proto"></div>
+    <div class="proto"></div>
+    <div class="proto"></div>
+    <div class="proto"></div>
+</div>
+
+
+<div class="container">
+    <div class="inner">
+        <div class="left">
+            <div col-6>
+                <img class="logo" src="{{ asset("images/logos/mamLogo.svg") }}" alt="CompleteUI Logo" >
+                <a href="{{ path('mainPage') }}"><img id="exit"src="{{ asset("images/logos/exitLogo.png") }}" alt="exit"></a>
+            </div>
+
+            <div class="content">
+                <h1> <span align="center">Bienvenue</span></h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus exercitationem, illum explicabo labore aliquid provident maiores nobis voluptates voluptatem. Quo tempore tempora sit natus sequi, quos dicta nihil assumenda?</p>
+                <p class="light">CompleteUI is releasing before 2020 on Udemy & other networks.</p>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="inside">
+
+
+                <form method="post">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+
+                    <p id="log">Se Connecter</p>
+                    <div>
+                        <label for="inputEmail">Email</label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                        <label for="inputPassword">Mot de passe</label>
+                        <input type="password" name="mot de passe" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+
+                        <br><br>
+
+                        <a id="fyp"href="">Mot de passe oublié?</a>
+                        <a id="su" href="{{ path('app_register') }}">Creer compte</a>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <button class="btn btn-lg btn-primary" type="submit">
+                            Se connecter
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    let left = document.querySelector('.left');
+    let content = document.querySelector('.content');
+    let protos = document.querySelectorAll('.proto');
+
+    left.addEventListener('mousemove', (event) => {
+        let move = (event.clientX * 0.05) + 4;
+        let move2 = (event.clientX * 0.003);
+        content.style.transform = `translateX(-${move2}%)`;
+
+        protos.forEach((proto) => {
+            proto.style.transform = `translateX(${move}%)`;
+        })
+    })
+</script>
+</body>
+</html>

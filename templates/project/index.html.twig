@@ -22,7 +22,7 @@
                 <td>{{ project.id }}</td>
                 <td>{{ project.nom }}</td>
                 <td>{{ project.decription }}</td>
-                <td><img src="{{ assert("/images/products/ ~ {{ project.image }}") }}" alt="aaaa">{{ project.image }}</td>
+                <td>{{ project.image }}</td>
                 <td>
                     <a href="{{ path('project_show', {'id': project.id}) }}">show</a>
                     <a href="{{ path('project_edit', {'id': project.id}) }}">edit</a>

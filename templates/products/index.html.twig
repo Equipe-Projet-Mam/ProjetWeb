@@ -9,7 +9,7 @@
 <div style="top : 20ex">
     <h1>Products index</h1>
 
-    <table class="table">
+    <table class="table" style="margin : 5ex; margin-top : 10ex;">
         <thead>
         <tr>
             <th>Id</th>
@@ -31,8 +31,8 @@
                 <td><img src ="data:image/png;base64,{{ images[key] }}" alt = "product image" style="width: 20ex; height: 20ex"></td>
                 <td>{{ product.categorie }}</td>
                 <td>
-                    <a href="{{ path('products_show', {'id': product.id}) }}">show</a>
-                    <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
+                    <button><a href="{{ path('products_show', {'id': product.id}) }}">detail</a></button>
+                    <button><a href="{{ path('products_edit', {'id': product.id}) }}">modifier</a></button>
                 </td>
             </tr>
         {% else %}
@@ -43,7 +43,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('products_new') }}">Create new</a>
+    <a href="{{ path('products_new') }}">Creer nouveau produit</a>
 </div>
 
 {% endblock %}

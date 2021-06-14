@@ -1,0 +1,31 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title  %}
+    liste des clients
+{% endblock %}
+{% block contenue %}
+<h1>Liste des clients</h1>
+    <table class="table">
+        <thead>
+
+        <th>ID</th>
+        <th>EMAIL</th>
+        <th>TELEPHONE</th>
+        </thead>
+        <tbody>
+        {% for user in users %}
+           <tr>
+               <td>{{ user.id }}</td>
+               <td>{{ user.email }}</td>
+               <td>{{ user.telephone }}</td>
+           </tr>
+
+        {% else %}
+            <tr>
+                <td colspan="3">il n'y a pas de clients inscrits</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

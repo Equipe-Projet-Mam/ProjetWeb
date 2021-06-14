@@ -37,28 +37,34 @@
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Accueil
+                            <a class="nav-link active" href="{{ path('mainPage') }}">Accueil
                                 <span class="visually-hidden"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projets</a>
+                            <a class="nav-link" href=" #">Projets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produits</a>
+                            <a class="nav-link" href="{{ path('afficherProduits') }}">Produits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inscription</a>
+                            <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
                         </li>
                         </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Connection</a>
+                            <a class="nav-link" href=" {{ path('app_login') }} ">Connexion</a>
                         </li>
+
                     </ul>
+                    {% if (is_granted('ROLE_ADMIN')) or (is_granted('ROLE_USER')) %}
                     <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Rechercher Produit">
-                        <button class="btn btn-secondary my-2 my-sm-0" style="margin-left :2ex ;" type="submit">Recherche</button>
+                        <a class="btn btn-secondary my-2 my-sm-0" style="margin-left :2ex ;" href="{{ path('app_logout') }}">Se déconnecter</a>
                     </form>
+                    {% endif %}
+
+
                 </div>
             </div>
         </nav>
@@ -115,16 +121,9 @@
                         Vendredi - Samedi
                         7h-13h
                         ﻿​
-
                         Mail:
-
-
-                        mam@topnet.tn
-
-
+                        mam@topnet.t
                         Téléphone : +216 70 721 177
-
-
                         Fax : +216 70 721 173</p>
                 </div>
             </div>
